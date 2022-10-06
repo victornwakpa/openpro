@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: founder;
+    src: url(Founders.otf);
+}
+:root {
+    --first-color: rgba(58, 208, 235, 0.6);
+    --second-color: rgba(0, 0, 0, 0.8);
+    --third-color: rgba(0, 0, 0, 0.8);
+    --fourth-color: rgba(0, 0, 0, 0.8);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    height: 100vh;
+    /* background-image: url(cityscape.jpeg); */
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+}
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.box {
+    /* width: 100%; */
+    height: 100vh;
+}
+.section-1 {
+    background: linear-gradient(var(--first-color), var(--first-color), var(--second-color));
+}
+.section-2 {
+    background: linear-gradient(var(--third-color), var(--fourth-color));
+}
+
+/*  FOR ARROW */
+span{
+    position: absolute;
+    bottom: 10%;
+    /* right: 0; */
+    width: 10px;
+    height: 40px;
+    /* background:white; */
+    border-radius:5px;
+    margin: 6px;
+    animation: move 1.1s infinite ease-in-out;
+  }
+  
+  span:nth-of-type(1){
+    transform: rotate(-45deg);
+  }
+  
+  span:nth-of-type(2){
+    transform: rotate(45deg);
+  }
+  
+  @keyframes move{
+    0%{margin-top:0;}
+    50%{margin-top:100px;}
+    100%{margin-top:0;}
+  }
+
+
+  .point {
+    height: 100vh;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+.pointInnerDiv span, .pointInnerDiv a {
+    padding-left: 10px ;
+    display: block;
+    justify-content: center;
+}
+a {
+    text-decoration: none;
+}
